@@ -6,8 +6,8 @@ const { DatabaseSync } = require('node:sqlite');
 const { WebSocketServer } = require('ws');
 
 // Configuration
-const TCP_PORT = 4000;
-const HTTP_PORT = 3050;
+const TCP_PORT = process.env.TCP_PORT || 4000;
+const HTTP_PORT = process.env.PORT || 3050;
 const DB_PATH = path.join(__dirname, 'queue.db');
 
 // Initialize SQLite Database
