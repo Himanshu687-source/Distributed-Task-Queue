@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: distributed-task-queue
+    env: node
+    buildCommand: npm install
+    startCommand: node broker.js
